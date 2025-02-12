@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true, // 保存時に自動フォーマット
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // デフォルトフォーマッタを Prettier に設定
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"], // ESLint の対象ファイル
+    "tailwindCSS.experimental.classRegex": [
+      "tw`([^`]*)", // TailwindCSS クラスの正規表現
+      "tw\\(([^)]*)\\)" // JavaScript 内の TailwindCSS クラス
+    ]
+  }
+  
