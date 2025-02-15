@@ -5,7 +5,9 @@ export interface User {
 
 export interface Category {
   categoryid: string;
-  category: string;
+  part: string;
+  theme: string;
+  period: string;
 }
 
 export interface Card {
