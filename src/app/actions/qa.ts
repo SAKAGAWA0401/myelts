@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { promises as fs } from 'fs';
 import os from 'os';
 import path from 'path';
+import { setupGoogleCredentials } from '@/lib/googleAuth';
 
 // GOOGLE_APPLICATION_CREDENTIALSで自動認証、初期化
 const ttsClient = new textToSpeech.TextToSpeechClient();
@@ -34,6 +35,7 @@ interface Word {
 }
 
 async function generateSpeech(text: string): Promise<string> {
+  setupGoogleCredentials();
   const [response] = await ttsClient.synthesizeSpeech({
     input: { text },
     voice: {
