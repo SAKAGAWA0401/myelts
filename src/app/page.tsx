@@ -362,7 +362,7 @@ export default function Home() {
             {cards.length > 0 ? (
               <>
                 <Card
-                  className={`min-h-[400px] w-full max-w-2xl p-8 ${isFlipped ? 'bg-blue-50' : 'bg-white'}`}
+                  className={`min-h-[200px] w-full max-w-2xl p-8 ${isFlipped ? 'bg-blue-50' : 'bg-white'}`}
                 >
                   <div className="flex h-full flex-col items-center justify-center">
                     <div className="text-center">
@@ -374,31 +374,6 @@ export default function Home() {
                           ? cards[currentCardIndex].answer
                           : cards[currentCardIndex].question}
                       </p>
-                      {isFlipped &&
-                        cards[currentCardIndex].words.length > 0 && (
-                          <div className="mt-8 rounded-lg bg-white p-4 shadow-sm">
-                            <h4 className="mb-2 text-sm font-semibold text-gray-600">
-                              Key Words and Pronunciations
-                            </h4>
-                            <div className="space-y-2">
-                              {cards[currentCardIndex].words.map(
-                                (word, index) => (
-                                  <div
-                                    key={index}
-                                    className="flex items-center justify-center gap-4 text-sm"
-                                  >
-                                    <span className="font-medium">
-                                      {word.word}
-                                    </span>
-                                    <span className="text-gray-500">
-                                      {word.ipa}
-                                    </span>
-                                  </div>
-                                ),
-                              )}
-                            </div>
-                          </div>
-                        )}
                     </div>
                   </div>
                 </Card>
@@ -433,6 +408,27 @@ export default function Home() {
                     Next
                   </Button>
                 </div>
+
+                {isFlipped && cards[currentCardIndex].words.length > 0 && (
+                  <div className="mt-8 w-full max-w-2xl">
+                    <Card className="p-6">
+                      <h4 className="mb-4 text-center text-sm font-semibold text-gray-600">
+                        Key Words and Pronunciations
+                      </h4>
+                      <div className="grid grid-cols-2 gap-4">
+                        {cards[currentCardIndex].words.map((word, index) => (
+                          <div
+                            key={index}
+                            className="flex items-center justify-between rounded-lg bg-gray-50 p-3"
+                          >
+                            <span className="font-medium">{word.word}</span>
+                            <span className="text-gray-500">{word.ipa}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </Card>
+                  </div>
+                )}
               </>
             ) : (
               <Card className="w-full max-w-2xl p-8">
