@@ -6,8 +6,26 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'myelts',
-  description: 'myelts speaking task',
+  title: 'MyELTS',
+  description: 'Learn IELTS speaking tasks with interactive flashcards',
+  manifest: '/manifest.json',
+  themeColor: '#ffffff',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'MyELTS',
+  },
+  icons: {
+    icon: '/icons/icon-512x512.png',
+    shortcut: '/icons/icon-192x192.png',
+    apple: '/icons/icon-192x192.png',
+  },
 };
 
 export default function RootLayout({
