@@ -299,14 +299,26 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4">
-            <h1 className="text-2xl font-bold text-gray-900">MyELTS</h1>
-            <Button variant="outline" asChild>
-              <Link href="/qa-register">QA Register</Link>
-            </Button>
-            <Button variant="outline" asChild>
-              <Link href="/category-register">Category Register</Link>
-            </Button>
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4">
+            <h1 className="text-xl font-bold text-gray-900 sm:text-2xl">
+              MyELTS
+            </h1>
+            <div className="flex flex-wrap gap-2">
+              <Button
+                variant="outline"
+                asChild
+                className="h-auto whitespace-normal py-2 text-sm"
+              >
+                <Link href="/qa-register">Register QA</Link>
+              </Button>
+              <Button
+                variant="outline"
+                asChild
+                className="h-auto whitespace-normal py-2 text-sm"
+              >
+                <Link href="/category-register">Register Category</Link>
+              </Button>
+            </div>
           </div>
           <SignedIn>
             <UserButton />
