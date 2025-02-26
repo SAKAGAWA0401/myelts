@@ -427,7 +427,7 @@ export default function Home() {
                       <h4 className="mb-4 text-center text-sm font-semibold text-gray-600">
                         Key Words and Pronunciations
                       </h4>
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                         {cards[currentCardIndex].words.map((word, index) => (
                           <div
                             key={index}
