@@ -335,9 +335,8 @@ export default function Home() {
                 className="cursor-pointer p-6 transition-shadow hover:shadow-lg"
                 onClick={() => handleCategorySelect(category.categoryid)}
               >
-                <h2 className="text-xl font-semibold">
-                  {`${category.part} - ${category.theme}`}
-                </h2>
+                <p className="mt-2 text-gray-600">{category.part}</p>
+                <h2 className="text-xl font-semibold">{category.theme}</h2>
                 <p className="mt-2 text-gray-600">{category.period}</p>
               </Card>
             ))}

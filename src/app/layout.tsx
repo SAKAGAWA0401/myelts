@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     title: 'MyELTS',
   },
   icons: {
-    icon: '/icons/icon-512x512.png',
-    shortcut: '/icons/icon-192x192.png',
-    apple: '/icons/icon-192x192.png',
+    icon: '/icon-512.png',
+    shortcut: '/icon-192.png',
+    apple: '/icon-192.png',
   },
 };
 
