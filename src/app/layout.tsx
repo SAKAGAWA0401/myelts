@@ -26,6 +26,13 @@ export const metadata: Metadata = {
     shortcut: '/icon-192.png',
     apple: '/icon-192.png',
   },
+  other: {
+    'apple-mobile-web-app-capable': 'yes',
+    'mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'black-translucent',
+    'theme-color': '#ffffff',
+    'background-color': '#ffffff',
+  },
 };
 
 export default function RootLayout({

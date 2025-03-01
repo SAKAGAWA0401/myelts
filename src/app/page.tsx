@@ -453,7 +453,13 @@ export default function Home() {
       </main>
 
       {/* Hidden audio element for playing sounds */}
-      <audio ref={audioRef} />
+      <audio
+        ref={audioRef}
+        playsInline
+        preload="none"
+        x-webkit-airplay="allow"
+        data-wf-ignore="true"
+      />
     </div>
   );
 }
